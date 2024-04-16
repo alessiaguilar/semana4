@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import Message from "./message";
 import Header from "./header";
 import Main from "./main";
-import Aside from "./aside";
+import Form from "./form";
 import Footer from "./footer";
 
 
@@ -17,7 +17,7 @@ root.render(
                     <Main></Main>
                 </div>
                 <div className="col-md-4">
-                    <Aside></Aside>
+                    <Form></Form>
                 </div>
             </div>
         </div>
