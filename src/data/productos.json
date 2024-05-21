@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Producto-1",
+        "slug": "producto-1",
+        "description": "Descripcion del producto 1",
+        "picture": "https://unilimpio.com/static/a3929000b57b1d0cf3e20104bd5507a0/b7dec/productos-de-limpieza-para-tu-hogar.webp"
+    },
+    {
+        "name": "Producto 2",
+        "slug": "producto-2",
+        "description": "Descripcion del producto 2",
+        "picture": "https://www.cien.adexperu.org.pe/wp-content/uploads/2023/10/productos-limpieza-basicos-1.jpg"
+    },
+    {
+        "name": "Producto 3",
+        "slug": "producto-3",
+        "description": "Descripcion del producto 3",
+        "picture": "https://s3.ppllstatics.com/laverdad/www/multimedia/2023/03/15/productos-limpieza-toxicos-peligrosos-ocu-ksTE-U1909178767610w-1200x840@La%20Verdad.jpg"
+    }
+]

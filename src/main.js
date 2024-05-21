@@ -1,32 +1,58 @@
+import { Container, Row, Col, Carousel } from 'react-bootstrap';
+import Productos from './data/productos.json'
+import { useNavigate } from 'react-router-dom';
+
+
 const Main = () => {
-    return <main>
-        <div id="carouselExampleIndicators" class="carousel slide">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="https://www.ocu.org/-/media/ocu/images/home/alimentacion/alimentos/pizzas_selector_1600x900.jpg?rev=6a81e278-07fc-4e95-9ba1-361063f35adf&hash=B8B1264AB6FC3F4B1AE140EB390208CD" class="d-block w-100" alt="Pizza 1"/>
-                </div>
-                <div class="carousel-item">
-                    <img src="https://th.bing.com/th/id/R.9e0caa8628009f5bb525d1e09604fda9?rik=dI0nOfBy3ahp1w&riu=http%3a%2f%2fvitaitaliantours.com%2fwp-content%2fuploads%2f2016%2f03%2fNeapolitan-Pizza-Margherita.jpg&ehk=Rk%2bfgzpAHbGig6ZHOExH6bwW62dG29BR4XPCsHqKBSI%3d&risl=1&pid=ImgRaw&r=0" class="d-block w-100" alt="Pizza 2" />
-                </div>
-                <div class="carousel-item">
-                    <img src="https://th.bing.com/th/id/R.469eaee2b9ac36c27feedfd2796cee0a?rik=Rvec%2b%2bz8yQtN5g&riu=http%3a%2f%2fastrolabio.com.mx%2fwp-content%2fuploads%2f2015%2f11%2fPizza-Margherita.jpg&ehk=oLfkE5pRt3sWIYWRbo76Bpm4LZPNIJozQ3VuCCbX16M%3d&risl=&pid=ImgRaw&r=0" class="d-block w-100" alt="Pizza 3"/>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </main>;
+    const navigate = useNavigate();
+
+    const handleClick = (slug) => {
+        navigate("/detalle/" + slug);
+    }
+
+    return (
+        <Container className="col-8">
+            <Row className="justify-content-center">
+                <Col>
+                    <h1 className="text-center">¡Descubre la revolución en limpieza con nuestra nueva publicación de productos de limpieza!</h1>
+                    
+                    <Carousel>
+                        {
+                                Productos.map(it => {
+                                return (<Carousel.Item onClick={(e) => {
+                                    e.preventDefault(); handleClick(it.slug)
+                                }}>
+                                    <img className="d-block w-100" src={it.picture}></img>
+                                    <Carousel.Caption>
+                                        <h3>{it.name}</h3>
+                                        <p>{it.description}</p>
+                                    </Carousel.Caption>
+
+                                </Carousel.Item>);
+                            })
+                        }
+                    </Carousel>
+
+                    <div className="py-4">
+                        <p>En un mundo donde la limpieza es esencial, nosotros te ofrecemos una solución completa y eficaz para mantener tu hogar, oficina o cualquier espacio impecable y reluciente.</p>
+                        <p>¿Qué te ofrecemos?</p>
+                        <ul>
+                            <li>
+                                <strong>Variedad de productos:</strong> Desde desinfectantes hasta detergentes, pasando por limpiadores multiusos, nuestra publicación tiene todo lo que necesitas para abordar cualquier tarea de limpieza.
+                            </li>
+                            <li>
+                                <strong>Calidad superior:</strong> Nuestros productos están formulados con ingredientes de primera calidad que garantizan resultados excepcionales sin comprometer la seguridad ni el medio ambiente.
+                            </li>
+                            <li>
+                                <strong>Eficiencia probada:</strong> Con años de experiencia en el mercado, nuestros productos han demostrado su eficacia en numerosos hogares y establecimientos comerciales. ¡Confía en lo probado y verdadero!
+                            </li>
+                        </ul>
+                        <p>No pierdas más tiempo y únete a la legión de clientes satisfechos que confían en nuestra publicación de productos de limpieza. ¡Haz de la limpieza una tarea fácil y disfruta de un espacio impecable en todo momento!</p>
+                    </div>
+                </Col>
+            </Row>
+        </Container>
+    );
 }
 
 export default Main;
