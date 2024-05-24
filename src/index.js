@@ -1,25 +1,18 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'react'
-import './style.css';
+import './style.css'; // Asegúrate de que este archivo se esté importando
 import { createRoot } from "react-dom/client";
-
-import {
-    createBrowserRouter,
-    RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Basic from "./layout/basic";
+import Main from "./main";
+import Aside from "./aside";
+import Single from './single';
 
 const feather = require('feather-icons');
 
-import Main from "./main";
-import Aside from "./aside";
-
-import Single from './single';
-import Basic from "./layout/basic";
-
-setTimeout ( () => {
+setTimeout(() => {
     feather.replace();
 }, 1000);
- 
+
 const router = createBrowserRouter([
     {
         path: "/",
@@ -38,13 +31,13 @@ const router = createBrowserRouter([
             },
             {
                 path: "detalle/:slug",
-                element: <Single/>
+                element: <Single />
             },
         ],
     }
 ]);
 
 const root = createRoot(document.getElementById("root"));
-    root.render(
+root.render(
     <RouterProvider router={router} />
 );

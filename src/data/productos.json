@@ -1,20 +1,20 @@
 [
     {
-        "name": "Producto-1",
-        "slug": "producto-1",
-        "description": "Descripcion del producto 1",
-        "picture": "https://unilimpio.com/static/a3929000b57b1d0cf3e20104bd5507a0/b7dec/productos-de-limpieza-para-tu-hogar.webp"
+        "name": "Margherita",
+        "slug": "pizza-1",
+        "description": "Tomate, mozzarella, albahaca fresca",
+        "picture": "https://th.bing.com/th/id/OIP.E3-gsYcd-vpzpRXRvDQyJgHaEx?rs=1&pid=ImgDetMain"
     },
     {
-        "name": "Producto 2",
-        "slug": "producto-2",
-        "description": "Descripcion del producto 2",
-        "picture": "https://www.cien.adexperu.org.pe/wp-content/uploads/2023/10/productos-limpieza-basicos-1.jpg"
+        "name": "Pepperoni",
+        "slug": "pizza-2",
+        "description": "Pepperoni, mozzarella, salsa tomate",
+        "picture": "https://th.bing.com/th/id/OIP.paK_UK5Hnf_fGUCkmZ-hFAAAAA?rs=1&pid=ImgDetMain"
     },
     {
-        "name": "Producto 3",
-        "slug": "producto-3",
-        "description": "Descripcion del producto 3",
-        "picture": "https://s3.ppllstatics.com/laverdad/www/multimedia/2023/03/15/productos-limpieza-toxicos-peligrosos-ocu-ksTE-U1909178767610w-1200x840@La%20Verdad.jpg"
+        "name": "Hawaiana",
+        "slug": "pizza-3",
+        "description": "Piña, jamón, mozzarella, tomate",
+        "picture": "https://th.bing.com/th/id/R.5187994b65ca7a273e5054224edca7f3?rik=3nO1KorBAxvu%2fw&pid=ImgRaw&r=0"
     }
 ]

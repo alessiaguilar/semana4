@@ -1,4 +1,34 @@
 body {
-    background-color: #343A40; /* Gris oscuro */
-    color: #FFFFFF; /* Blanco para el texto para un buen contraste */
+    background-color: #FCFCF5;
+}
+
+.custom-header {
+    background-color: #a3a39777;
+  }
+  
+  .feather-icon-custom {
+    color: #e6110a;
+  }
+  
+  .nav-link-custom {
+    color: #e6110a !important;
+  }
+
+  .text-e6110a {
+    color: #e6110a;
+  }
+  
+  .btn-e6110a {
+    background-color: #e6110a;
+    border-color: #e6110a;
+    color: white; /* Asegúrate de que el texto sea visible */
+  }
+  
+  .btn-e6110a:hover {
+    background-color: darken(#e6110a, 10%); /* Opcional: un color más oscuro al pasar el mouse */
+    border-color: darken(#e6110a, 10%);
+  }
+  
+  .footer-custom {
+    background-color: #FCFCF5;
 }
