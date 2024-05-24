@@ -1,6 +1,7 @@
 import { Container, Row, Col, Carousel } from 'react-bootstrap';
 import Productos from './data/productos.json'
 import { useNavigate } from 'react-router-dom';
+import './style.css';
 
 const Main = () => {
     const navigate = useNavigate();
@@ -10,7 +11,7 @@ const Main = () => {
     }
 
     return (
-        <Container className="col-8">
+        <Container className="col-8 text-white">
             <Row className="justify-content-center">
                 <Col>
                 <h1 className="text-center text-e6110a">Bienvenido a</h1>
